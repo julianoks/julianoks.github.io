@@ -11,13 +11,16 @@
 	font-size: 14px;
 
 	width: 100%;
-	padding-top: 15vh;
-	padding-bottom: 15vh;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
+	margin-top: 15vh;
+	margin-bottom: 15vh;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 25px;
 }
 
 .article img {
-	max-width: 40vw;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	width: 100%;
 	max-height: 40vh;
 	margin-left: auto;
 	margin-right: auto;
@@ -26,10 +29,12 @@
 
 .article h1 {
 	font-size: 24px;
+	padding: 25px;
     font-weight: bold;
 	margin-left: auto;
 	margin-right: auto;
 	display: table;
+	text-align: center;
 }
 
 .article .readmore {
@@ -39,13 +44,18 @@
 	color: black;
 	text-decoration: none;
 	font-size: 14px;
+	display: none;
 }
+
+
 
 .center {
 	margin-left: auto;
 	margin-right: auto;
 	display: table;
 }
+
+
 
 .faces {
     height: 3vmax;
@@ -67,8 +77,6 @@ table.personal td {
     position: relative;
 }
 
-
-
 table.personal a {
 	color:black;
 	text-decoration: none;
@@ -78,14 +86,16 @@ table.personal a {
 </style>
 <script>
 window.onload = () => {
-	Array.from(document.querySelectorAll('.article')).forEach(article => {
-		let a = document.createElement('a')
-		a.href = article.querySelector('.readmore').href
-		a.style = 'color:black; text-decoration: none;'
-		a.appendChild(article.cloneNode(true))
-		article.parentNode.insertBefore(a, article)
-		article.remove()
-	})
+	Array.from(document.querySelectorAll('.article'))
+		.filter(article => article.querySelector('.readmore') != null)
+		.forEach(article => {
+			let a = document.createElement('a')
+			a.href = article.querySelector('.readmore').href
+			a.style = 'color:black; text-decoration: none;'
+			a.appendChild(article.cloneNode(true))
+			article.parentNode.insertBefore(a, article)
+			article.remove()
+		})
 }
 </script>
 <body>
@@ -101,6 +111,13 @@ window.onload = () => {
 <td><a href="etc/Julian_Oks_resume.pdf">Resume</a></td>
 </tr>
 </table>
+
+<div class="article" style="margin-top: 10px; border: none;">
+	<div style="font-size: large; max-width: 50%; margin-left: auto; margin-right: auto;">
+		this is some of the web-based stuff I made as a student
+		<div style="font-size: x-small;">* it's incomplete and mostly out-of-date. changes coming soon!</div>
+	</div>
+</div>
 
 <div class="article">
 <img src="approximate_counting/index.jpg">

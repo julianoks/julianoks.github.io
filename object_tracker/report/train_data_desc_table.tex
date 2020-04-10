@@ -1,0 +1,27 @@
+\begin{table*}[tbp]
+\begin {center}
+\begin{tabular}{|l| c| c| c| c| c| c| c |c | c | c| }
+\hline
+\multicolumn{11}{|c|}{\bf Description of Training Sequences} \\ 
+\hline 
+      Name & FPS & Resolution & Length & Tracks & Boxes & Density & 3D & Camera & Viewpoint & Shadows  \\ 
+      \hline
+     TUD-Stadtmitte & 25 & 640x480 & 179 (00:07) & 10 & 1156 & 6.5 & yes & static  & medium & cloudy  \\
+     TUD-Campus & 25 & 640x480 & 71 (00:03) & 8 & 359 & 5.1 & no & static & medium & cloudy  \\
+    PETS09-S2L1 & 7 & 768x576 & 795 (01:54) & 19 & 4476 & 5.6 & yes & static & high & cloudy  \\
+    ETH-Bahnhof & 14 & 640x480 & 1000 (01:11) & 171 & 5415 & 5.4 & yes & moving & low & cloudy	 \\
+    ETH-Sunnyday & 14 & 640x480 & 354 (00:25) & 30 & 1858 & 5.2 & yes & moving & low & sunny	 \\
+     ETH-Pedcross2 & 14 & 640x480 & 840 (01:00) & 133 & 6263 & 7.5 &no & moving & low & sunny \\
+     ADL-Rundle-6 & 30 & 1920x1080 & 525 (00:18) & 24 & 5009 & 9.5 &no & static & low & cloudy  \\
+      ADL-Rundle-8 & 30 & 1920x1080 & 654 (00:22) & 28 & 6783 & 10.4 &no & moving & medium & night  \\
+      KITTI-13 & 10 & 1242x375 & 340 (00:34) & 42 & 762 & 2.2 &no & moving & medium & sunny  \\
+       KITTI-17 & 10 & 1242x370 & 145 (00:15) & 9 & 683 & 4.7 &no & static & medium & sunny  \\
+      Venice-2 & 30 & 1920x1080 & 600 (00:20) & 26 & 7141 & 11.9 &no & static & medium & sunny \\
+\hline
+\multicolumn{3}{|c|}{\bf Total training} & {\bf 5503 (06:29)} & {\bf 500} & {\bf 39905} & {\bf 7.3} & & & &  \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Description of videos in training set, courtesy of \cite{motchallenge2015}.}
+\label{tab:dataoverview}
+\end{table*}

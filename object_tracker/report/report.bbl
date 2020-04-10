@@ -1,0 +1,173 @@
+\begin{thebibliography}{10}\itemsep=-1pt
+
+\bibitem{kdtree_1975}
+Jon~Louis Bentley.
+\newblock Multidimensional binary search trees used for associative searching.
+\newblock {\em Commun. ACM}, 18(9):509--517, Sept. 1975.
+
+\bibitem{CLEARevaluation}
+Keni Bernardin and Rainer Stiefelhagen.
+\newblock Evaluating multiple object tracking performance: The clear mot
+  metrics.
+\newblock {\em EURASIP Journal on Image and Video Processing}, 2008(1):246309,
+  2008.
+
+\bibitem{VIVID_dataset}
+Robert Collins, Xuhui Zhou, and Seng Teh.
+\newblock An open source tracking testbed and evaluation web site.
+\newblock {\em IEEE International Workshop on Performance Evaluation of
+  Tracking and Surveillance}, 01 2005.
+
+\bibitem{max_clique}
+A. {Dehghan}, S.~M. {Assari}, and M. {Shah}.
+\newblock Gmmcp tracker: Globally optimal generalized maximum multi clique
+  problem for multiple object tracking.
+\newblock In {\em 2015 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 4091--4099, June 2015.
+
+\bibitem{dendorfer2019cvpr19}
+Patrick Dendorfer, Hamid Rezatofighi, Anton Milan, Javen Shi, Daniel Cremers,
+  Ian Reid, Stefan Roth, Konrad Schindler, and Laura Leal-Taixe.
+\newblock Cvpr19 tracking and detection challenge: How crowded can it get?,
+  2019.
+
+\bibitem{cvpr2019challenge}
+Patrick Dendorfer, Seyed~Hamid Rezatofighi, Anton Milan, Javen Shi, Daniel
+  Cremers, Ian~D. Reid, Stefan Roth, Konrad Schindler, and Laura
+  Leal{-}Taix{\'{e}}.
+\newblock {CVPR19} tracking and detection challenge: How crowded can it get?
+\newblock {\em CoRR}, abs/1906.04567, 2019.
+
+\bibitem{way_they_move}
+C. {Dicle}, O.~I. {Camps}, and M. {Sznaier}.
+\newblock The way they move: Tracking multiple targets with similar appearance.
+\newblock In {\em 2013 IEEE International Conference on Computer Vision}, pages
+  2304--2311, Dec 2013.
+
+\bibitem{datasets_survey}
+S{\'e}verine Dubuisson and Christophe Gonzales.
+\newblock A survey of datasets for visual tracking.
+\newblock {\em Machine Vision and Applications}, 27(1):23--52, 2016.
+
+\bibitem{detect_and_track}
+Rohit Girdhar, Georgia Gkioxari, Lorenzo Torresani, Manohar Paluri, and Du
+  Tran.
+\newblock Detect-and-track: Efficient pose estimation in videos.
+\newblock {\em CoRR}, abs/1712.09184, 2017.
+
+\bibitem{pymotmetrics}
+Christoph Heindl.
+\newblock py-motmetrics.
+\newblock \url{https://github.com/cheind/py-motmetrics}, 2018.
+
+\bibitem{local_bin_patterns}
+D. {Huang}, C. {Shan}, M. {Ardabilian}, Y. {Wang}, and L. {Chen}.
+\newblock Local binary patterns and its application to facial image analysis: A
+  survey.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part C
+  (Applications and Reviews)}, 41(6):765--781, Nov 2011.
+
+\bibitem{lacey_kalman_filter}
+Toney Lacey.
+\newblock Tutorial: The kalman filter.
+
+\bibitem{motchallenge2015}
+Laura Leal{-}Taix{\'{e}}, Anton Milan, Ian~D. Reid, Stefan Roth, and Konrad
+  Schindler.
+\newblock Motchallenge 2015: Towards a benchmark for multi-target tracking.
+\newblock {\em CoRR}, abs/1504.01942, 2015.
+
+\bibitem{lenz2014followme}
+Philip Lenz, Andreas Geiger, and Raquel Urtasun.
+\newblock Followme: Efficient online min-cost flow tracking with bounded memory
+  and computation, 2014.
+
+\bibitem{lin2014microsoft}
+Tsung-Yi Lin, Michael Maire, Serge Belongie, Lubomir Bourdev, Ross Girshick,
+  James Hays, Pietro Perona, Deva Ramanan, C.~Lawrence Zitnick, and Piotr
+  Dollár.
+\newblock Microsoft coco: Common objects in context, 2014.
+
+\bibitem{liu2018deep}
+Li Liu, Wanli Ouyang, Xiaogang Wang, Paul Fieguth, Jie Chen, Xinwang Liu, and
+  Matti Pietikäinen.
+\newblock Deep learning for generic object detection: A survey, 2018.
+
+\bibitem{rnn_track}
+Anton Milan, Seyed~Hamid Rezatofighi, Anthony~R. Dick, Konrad Schindler, and
+  Ian~D. Reid.
+\newblock Online multi-target tracking using recurrent neural networks.
+\newblock {\em CoRR}, abs/1604.03635, 2016.
+
+\bibitem{in_the_wild}
+George Papandreou, Tyler Zhu, Nori Kanazawa, Alexander Toshev, Jonathan
+  Tompson, Chris Bregler, and Kevin~P. Murphy.
+\newblock Towards accurate multi-person pose estimation in the wild.
+\newblock {\em CoRR}, abs/1701.01779, 2017.
+
+\bibitem{PETS_dataset}
+L. {Patino}, T. {Nawaz}, T. {Cane}, and J. {Ferryman}.
+\newblock Pets 2017: Dataset and challenge.
+\newblock In {\em 2017 IEEE Conference on Computer Vision and Pattern
+  Recognition Workshops (CVPRW)}, pages 2126--2132, July 2017.
+
+\bibitem{identity_linking_under_split}
+J.C. Rubio, J. Serrat, and Antonio López.
+\newblock Multiple target tracking and identity linking under split, merge and
+  occlusion of targets and observations.
+\newblock {\em ICPRAM 2012 - Proceedings of the 1st International Conference on
+  Pattern Recognition Applications and Methods}, 2:15--24, 01 2012.
+
+\bibitem{s2018mobilenetv2}
+Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov, and Liang-Chieh
+  Chen.
+\newblock Mobilenetv2: Inverted residuals and linear bottlenecks, 2018.
+
+\bibitem{deepflow}
+Samuel Schulter, Paul Vernaza, Wongun Choi, and Manmohan Chandraker.
+\newblock Deep network flow for multi-object tracking.
+\newblock {\em CoRR}, abs/1706.08482, 2017.
+
+\bibitem{shapley_s_1951}
+Shapley and Lloyd S.
+\newblock Notes on the n-person game - i: Characteristic-point solutions of the
+  four-person game, Jan 1951.
+
+\bibitem{smilkov2019tensorflowjs}
+Daniel Smilkov, Nikhil Thorat, Yannick Assogba, Ann Yuan, Nick Kreeger, Ping
+  Yu, Kangyi Zhang, Shanqing Cai, Eric Nielsen, David Soergel, Stan Bileschi,
+  Michael Terry, Charles Nicholson, Sandeep~N. Gupta, Sarah Sirajuddin, D.
+  Sculley, Rajat Monga, Greg Corrado, Fernanda~B. Viégas, and Martin
+  Wattenberg.
+\newblock Tensorflow.js: Machine learning for the web and beyond, 2019.
+
+\bibitem{Tang_2019}
+Zheng Tang and Jenq-Neng Hwang.
+\newblock Moana: An online learned adaptive appearance model for robust
+  multiple object tracking in 3d.
+\newblock {\em IEEE Access}, 7:31934–31945, 2019.
+
+\bibitem{SORT}
+Nicolai Wojke, Alex Bewley, and Dietrich Paulus.
+\newblock Simple online and realtime tracking with a deep association metric.
+\newblock {\em CoRR}, abs/1703.07402, 2017.
+
+\bibitem{DEEPSORT}
+Nicolai Wojke, Alex Bewley, and Dietrich Paulus.
+\newblock Simple online and realtime tracking with a deep association metric,
+  2017.
+
+\bibitem{tracking_benchmark}
+Y. {Wu}, J. {Lim}, and M. {Yang}.
+\newblock Online object tracking: A benchmark.
+\newblock In {\em 2013 IEEE Conference on Computer Vision and Pattern
+  Recognition}, pages 2411--2418, June 2013.
+
+\bibitem{bayesian_mot}
+J.~H. {Yoon}, M. {Yang}, J. {Lim}, and K. {Yoon}.
+\newblock Bayesian multi-object tracking using motion context from multiple
+  objects.
+\newblock In {\em 2015 IEEE Winter Conference on Applications of Computer
+  Vision}, pages 33--40, Jan 2015.
+
+\end{thebibliography}

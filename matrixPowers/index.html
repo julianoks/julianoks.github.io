@@ -1,0 +1,78 @@
+<link rel="stylesheet" type="text/css" href="../util/main.css">
+<script src='../util/main.js'></script>
+
+<body>
+<markdown>
+<center>
+# Magic with the Powers of a Matrix
+</center>
+
+This post will use powers of a matrix and its eigendecomposition to find closed form solutions to recursively-defined functions.
+We'll start off with the Fibonacci numbers and moving on to other topics, I guess, when I have time to post more :).
+
+### Recap of Eigendecomposition and Powers of a Matrix
+
+If a square \\( n \times n \\) matrix \\( A \\) has  \\( n \\) linearly independent eigenvectors,
+it can be factorized as
+$$ A = Q \Lambda Q^{-1} $$
+where \\(Q\\) is a square matrix with the eigenvectors as columns,
+and \\( \Lambda \\) is a diagonal matrix with the corresponding eigenvalues on the diagonal.
+This is called the eigendecomposition of a matrix.
+
+Now consider the powers of the matrix \\( A \\). Lets start with \\( A^2 \\),
+\begin{align}
+A^2 &= AA \\\\
+&= (Q \Lambda Q^{-1})(Q \Lambda Q^{-1}) \\\\
+&= Q \Lambda (Q^{-1} Q) \Lambda Q^{-1} \\\\
+&= Q \Lambda I \Lambda Q^{-1} \\\\
+&= Q \Lambda^2 Q^{-1}
+\end{align}
+
+By induction, we get the same cancellation for higher (positive integer) powers, giving us the amazing
+$$ A^n = Q \Lambda^n Q^{-1} $$
+
+## Fibonacci  Numbers with Powers of a Matrix
+The Fibonacci numbers form a recursively defined sequence, with \\( F\_0=0, F\_1 = 1 \\) as the base cases and \\( F\_n = F\_{n-1} + F\_{n-2} \\) for \\(n>1\\).
+I'll claim the powers of this matrix give us the Fibonacci numbers,
+$$ \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^n = \\begin{bmatrix} F\_{n+1} & F\_{n} \\\\ F\_{n} & F\_{n-1} \\end{bmatrix} $$
+#### Proof
+We'll do this by induction.
+The base case is trivial, $$ \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^1 =  \\begin{bmatrix} F\_{2} & F\_{1} \\\\ F\_{1} & F\_{0} \\end{bmatrix}  $$
+The inductive step is also pretty easy,
+\begin{align}
+\\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^n
+&= \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^{n-1} \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix} \\\\
+&= \\begin{bmatrix} F\_{n} & F\_{n-1} \\\\ F\_{n-1} & F\_{n-2} \\end{bmatrix} \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix} && \\text{(inductive hypothesis)} \\\\
+&= \\begin{bmatrix} F\_{n} + F\_{n-1} & F\_{n} \\\\ F\_{n-1} + F\_{n-2} & F\_{n-1} \\end{bmatrix} \\\\
+&= \\begin{bmatrix} F\_{n+1} & F\_{n} \\\\ F\_{n} & F\_{n-1} \\end{bmatrix}
+\end{align}
+
+#### Applying the Eigendecomposition
+Taking the eigendecomposition of the matrix \\( \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix} \\), we get
+\begin{align}
+Q &= \\begin{bmatrix} \varphi & -\varphi^{-1} \\\\ 1 & 1 \\end{bmatrix} \\\\
+\Lambda &= \\begin{bmatrix} \varphi & 0 \\\\ 0 & -\varphi^{-1} \\end{bmatrix} \\\\
+Q^{-1} &= \frac{1}{\varphi + \varphi^{-1}} \\begin{bmatrix} 1 & \varphi^{-1} \\\\ -1 & \varphi \\end{bmatrix} \\\\
+\end{align}
+Where \\( \varphi = (1 + \sqrt{5})/2 = 1.61803\dots  \\) is the golden ratio.
+Notice the eigenvalues turn out to be the golden ratios (there are two golden ratios, but I digress).
+There is certainly something very special about this matrix.
+
+Now we know that we can calculate the \\( n^{th} \\) Fibonacci number as, 
+\begin{align}
+F_n &= \begin{bmatrix} 0 & 1 \end{bmatrix} \\begin{bmatrix} F\_{n+1} & F\_{n} \\\\ F\_{n} & F\_{n-1} \\end{bmatrix} \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \\\\
+&= \begin{bmatrix} 0 & 1 \end{bmatrix}  \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^n  \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \\\\
+&= \begin{bmatrix} 0 & 1 \end{bmatrix}  Q \Lambda^n Q^{-1}  \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \\\\
+&= \begin{bmatrix} 1 & 1 \end{bmatrix} \\begin{bmatrix} \varphi^n & 0 \\\\ 0 & (-\varphi^{-1})^n \\end{bmatrix} \frac{1}{\varphi + \varphi^{-1}} \\begin{bmatrix} 1 & \varphi^{-1} \\\\ -1 & \varphi \\end{bmatrix}  \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \\\\
+&= \frac{1}{\varphi + \varphi^{-1}} \begin{bmatrix} \varphi^n & (-\varphi^{-1})^n \end{bmatrix}  \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} \\\\
+&= \frac{\varphi^n - (-\varphi^{-1})^n}{\varphi + \varphi^{-1}} \\\\
+&= \frac{1.618\dots^n - (-0.618\dots)^n}{2.236 \dots}
+\end{align}
+Which is pretty cool, we go a non-recursive closed form!
+One corollary here is that \\( F\_n = \frac{1.618\dots^n}{2.236 \dots} + O(0.618 \dots^n) \approx \frac{1.618\dots^n}{2.236 \dots} \\) for large enough \\( n \\), which means \\( F\_n = \Theta(\varphi^n) \\).
+
+
+
+</markdown>
+</body>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>

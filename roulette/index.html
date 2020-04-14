@@ -10,7 +10,7 @@
 ## What is roulette, and why do I care?
 I don't actually care about playing roulette, or simulating it on a computer, but it's a great analogy for the more general task of sampling from a *Discrete Probability Distribution*.
 
-For the uninitiated, roulette is a classic casino game in which a ball randomly falls into one of many slots. 
+For those that don't go to casinos, roulette is a classic game in which a ball randomly falls into one of many slots. 
 The gambling element is betting on which slot, or group of slots, the ball will fall into. 
 The ball should have an equal probability of hitting each slot, and so the probability of winning is proportional to the number of slots you're betting on, or more generally the area of the slots you're betting on.
 <style>
@@ -22,11 +22,7 @@ img[alt=realWheel] { width:33%; }
 <span style="font-size: 14px;">A roulette wheel</span>
 </center>
 
-Sampling from a Discrete Probability Distribution comes up a lot, for example when doing MCMC over discrete random variables, or when working with discrete bayesian networks.
-The way sampling came into my life was while grading genetic algorithm projects, where many students implemented a technique known as fitness proportionate selection.
-This technique selects a candidate solution from a population with a probability proportionate to the candidate's fitness.
-
-Almost every student's sampling implemention ran in O(n) time, and because there are O(n) selection events, in total the selection stage ran in O(n²). 💩.
+Sampling from a Discrete Probability Distribution comes up a lot, for example when running simulations, Monte Carlo methods (e.g. MCMC), and so so many more applications.
 The goal of this post is to describe sampling algorithms that run in O(n), O(log n), and O(1) time.
 
 Over the course of this post, I'll be working with the following probability distribution:
@@ -40,7 +36,7 @@ img[alt=probDist] { width:50%; }
 </center>
 
 *A note on amortized time complexity: Many sampling algorithms require some preprocessing step.
-In this post assume we're calling the sampler >=O(n) times, so that in order to amortize the cost of the preprocessing down to <=O(1) time per call, we need to make the preprocessing run in <=O(n) time.*
+In this post assume we're calling the sampler Omega(n) times, so that in order to amortize the cost of the preprocessing down to O(1) time per call, we need to make the preprocessing run in O(n) time.*
 
 ## Playing roulette, the easy way
 This section describes two sampling methods that run in O(n) and O(log n) time.
